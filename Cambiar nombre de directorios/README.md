@@ -1,13 +1,14 @@
-Título: Cambiar nombres del directorio.
+# Cambiar nombres del directorio.
 
-Descripción: Cambiar nombres del directorio usando las herramientas conceptuales del paradigma imperativo procedimental en Windows, Linux y C++.
+## Cambiar nombres del directorio usando las herramientas conceptuales <br/>
+del paradigma imperativo procedimental en Windows, Linux y C++.
 
 
 
-Integrantes:
+### Integrantes:
 
--Alvaro Niño: 20171020139
+- Alvaro Niño: 20171020139
 
--Nicolás Herrera: 20171020118
+- Nicolás Herrera: 20171020118
 
--Sebastian Chacón: 20171020148
+- Sebastian Chacón: 20171020148
