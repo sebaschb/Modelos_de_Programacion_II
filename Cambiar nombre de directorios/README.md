@@ -1,6 +1,6 @@
 # Cambiar nombres del directorio.
 
-## Cambiar nombres del directorio usando las herramientas conceptuales <br/>
+## Cambiar nombres del directorio usando las herramientas conceptuales
 del paradigma imperativo procedimental en Windows, Linux y C++.
 
 
