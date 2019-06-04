@@ -1,9 +1,9 @@
-# Caracol
+# Laberinto
 
-## Desenrrollar en forma de espiral o caracol una matriz de tamaño n*n
+## Solución de un laberinto por medio de árboles n-arios
 
 <p>
-Se realiza un programa en python con programación funcional, en donde se obtiene una matriz de un tamaño n*n de un archivo .txt y se muestra la matriz desenrrollada empezando por la primera posición de la matriz hacia la derecha, sin utilizar ciclos ni asignaciones.
+Se realiza un programa en python con programación funcional, en donde se determina si un laberinto tiene o no solución por medio de la realización de árboles n-arios determinando cada rama del árbol como un camino posible hasta la solución.
 </p>
 
 ### Integrantes:
