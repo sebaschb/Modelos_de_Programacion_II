@@ -3,7 +3,7 @@
 ## Solución de un laberinto por medio de árboles n-arios
 
 <p>
-Se realiza un programa en python con programación funcional, en donde se determina si un laberinto tiene o no solución por medio de la realización de árboles n-arios determinando cada rama del árbol como un camino posible hasta la solución.
+Se realiza un programa en python con programación funcional, en donde se determina si un laberinto tiene o no solución por medio de la elaboración de árboles n-arios, tomando cada rama del árbol como un camino posible hasta la solución.
 </p>
 
 ### Integrantes:
