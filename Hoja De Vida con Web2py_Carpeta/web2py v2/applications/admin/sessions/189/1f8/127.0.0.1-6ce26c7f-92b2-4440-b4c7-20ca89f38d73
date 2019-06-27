@@ -1,0 +1,21 @@
+€cgluon.globals
+Session
+q}q(Ucheck_versionq‰U_user_agentqcgluon.storage
+Storage
+q}q(Uplatformqh}q(Uversionq	NUnameq
+ULinuxqu…RqU	is_tabletq‰Udistqh}qh
+UUbuntuqs…RqUbotq‰U	is_mobileq‰Uosqh}qh
+hs…RqUbrowserqh}q(h	U67.0qh
+UFirefoxqu…Rqu…RqUappq}q(Upage_hoja_vida_manageU)## GestiÃ³n de Hojas de Vida
+
+{{=form}}Utables]q(U	auth_userq Utipo_estudioq!U	hoja_vidaq"Uformacion_academicaq#Uexperiencia_laboralq$eUnameUHojas_de_VidaUtable_tipo_estudio]q%Unombre requiredq&aUpage_formacion_academica_manageU2## GestiÃ³n de Formaciones academicas
+
+{{=form}}Utable_experiencia_laboral]q'(Uempresa requiredq(Ucargo requiredq)Ufecha_inicio date requiredq*Ufecha_fin dateq+Uhoja hoja_vida required uniqueq,eUpage_tipo_estudio_manageU,## GestiÃ³n de Tipos de Estudio
+
+{{=form}}Utable_formacion_academica]q-(Uinstitucion requiredq.Ufecha_inicio date requiredq/Ufecha_fin dateq0Utipo tipo_estudio requiredq1Uhoja hoja_vida required uniqueq2Utitulo requiredq3eU
+page_indexU&# bienvendio a la APP DE HOJAS DE VIDAU
+page_errorU# Error: the PÃ¡gina no existeUpage_experiencia_laboral_manageU2## GestiÃ³n de experiencias laborales
+
+{{=form}}Uparams]q4(UtitleUApp Hojas de vida†q5UsubtitleUpowered by web2py†q6UauthorUAlvaro, Nicolas y Sebastian†q7Uauthor_emailUalvaruto@gmail.com†q8UkeywordsN†q9UdescriptionUGestiÃ³n de hojas de vida†q:Ulayout_themeUDefault†q;Udatabase_uriUsqlite://storage.sqlite†q<Usecurity_keyU$aa174aa5-3fda-4037-b741-bcb3d87e1a38†q=Uemail_serverU	localhost†q>Uemail_senderUyou@example.com†q?Uemail_loginN†q@Ulogin_methodUlocal†qAUlogin_configN†qBUplugins]†qCeUtable_auth_user]qD(UusernameqEU
+first_nameqFU	last_nameqGUemailqHUpasswordqIeUpages]qJ(UindexqKUerrorqLUtipo_estudio_manageqMUformacion_academica_manageqNUexperiencia_laboral_manageqOUhoja_vida_manageqPeUtable_hoja_vida]qQ(Unombre requiredqRUtelefono requiredqSUdireccion requiredqTUdocumento required uniqueqUUfecha_nacimiento date requiredqVUperfilqWeuUflashqXNUpam_userqYNU_formkey[appupdate/create]qZ]q[(U$f5b150a1-bdba-45f3-bb1e-7143008f0b7eq\U$b3ba5782-75c1-46c9-a092-e701334e47f3q]eUthemesq^]q_UDefaultq`aUhmac_keyqaU$ace3d43f-490a-4198-88ad-e3fbc0bd11caqbUtokenqcU$fa75309a-2f47-44ff-a259-3b886df0de23qdhUautoqeU
+authorizedqfˆUpluginsqg]qhU_formkey[appcreate/create]qi]qj(U$b31ab700-1df3-4ac6-a826-ae2af60eea20qkU$22658b1d-081d-493a-82af-c0361b7b09ebqleU	last_timeqmGA×CÅH(eIu…Rqn.

@@ -1,0 +1,191 @@
+timestamp: 2019-06-23T00:54:05.822142
+CREATE TABLE "auth_user"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(128),
+    "last_name" CHAR(128),
+    "email" CHAR(512),
+    "password" CHAR(512),
+    "registration_key" CHAR(512),
+    "reset_password_key" CHAR(512),
+    "registration_id" CHAR(512)
+);
+success!
+timestamp: 2019-06-23T00:54:05.981648
+CREATE TABLE "auth_group"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "role" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2019-06-23T00:54:06.056677
+CREATE TABLE "auth_membership"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-23T00:54:06.124778
+CREATE TABLE "auth_permission"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  ,
+    "name" CHAR(512),
+    "table_name" CHAR(512),
+    "record_id" INTEGER
+);
+success!
+timestamp: 2019-06-23T00:54:06.201286
+CREATE TABLE "auth_event"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "time_stamp" TIMESTAMP,
+    "client_ip" CHAR(512),
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "origin" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2019-06-23T00:54:06.276716
+CREATE TABLE "auth_cas"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "created_on" TIMESTAMP,
+    "service" CHAR(512),
+    "ticket" CHAR(512),
+    "renew" CHAR(1)
+);
+success!
+timestamp: 2019-06-23T00:54:06.402734
+CREATE TABLE "t_hoja_vida"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "f_nombre" CHAR(512) NOT NULL,
+    "f_telefono" CHAR(512) NOT NULL,
+    "f_direccion" CHAR(512) NOT NULL,
+    "f_documento" CHAR(512) NOT NULL UNIQUE,
+    "f_fecha_nacimiento" DATE NOT NULL,
+    "f_perfil" CHAR(512),
+    "is_active" CHAR(1),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-23T00:54:06.502786
+CREATE TABLE "t_hoja_vida_archive"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "f_nombre" CHAR(512) NOT NULL,
+    "f_telefono" CHAR(512) NOT NULL,
+    "f_direccion" CHAR(512) NOT NULL,
+    "f_documento" CHAR(512) NOT NULL UNIQUE,
+    "f_fecha_nacimiento" DATE NOT NULL,
+    "f_perfil" CHAR(512),
+    "is_active" CHAR(1),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "current_record" INTEGER REFERENCES "t_hoja_vida" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-23T00:54:06.578238
+CREATE TABLE "t_tipo_estudio"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "f_nombre" CHAR(512) NOT NULL,
+    "is_active" CHAR(1),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-23T00:54:06.653187
+CREATE TABLE "t_tipo_estudio_archive"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "f_nombre" CHAR(512) NOT NULL,
+    "is_active" CHAR(1),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "current_record" INTEGER REFERENCES "t_tipo_estudio" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-23T00:54:06.737145
+CREATE TABLE "t_experiencia_laboral"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "f_empresa" CHAR(512) NOT NULL,
+    "f_cargo" CHAR(512) NOT NULL,
+    "f_fecha_inicio" DATE NOT NULL,
+    "f_fecha_fin" DATE,
+    "f_hoja" INTEGER REFERENCES "t_hoja_vida" ("id") ON DELETE CASCADE  NOT NULL  UNIQUE,
+    "is_active" CHAR(1),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-23T00:54:06.834090
+CREATE TABLE "t_experiencia_laboral_archive"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "f_empresa" CHAR(512) NOT NULL,
+    "f_cargo" CHAR(512) NOT NULL,
+    "f_fecha_inicio" DATE NOT NULL,
+    "f_fecha_fin" DATE,
+    "f_hoja" INTEGER REFERENCES "t_hoja_vida" ("id") ON DELETE CASCADE  NOT NULL  UNIQUE,
+    "is_active" CHAR(1),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "current_record" INTEGER REFERENCES "t_experiencia_laboral" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-23T00:54:06.930198
+CREATE TABLE "t_formacion_academica"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "f_institucion" CHAR(512) NOT NULL,
+    "f_fecha_inicio" DATE NOT NULL,
+    "f_fecha_fin" DATE,
+    "f_tipo" INTEGER REFERENCES "t_tipo_estudio" ("id") ON DELETE CASCADE  NOT NULL ,
+    "f_hoja" INTEGER REFERENCES "t_hoja_vida" ("id") ON DELETE CASCADE  NOT NULL  UNIQUE,
+    "f_titulo" CHAR(512) NOT NULL,
+    "is_active" CHAR(1),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-23T00:54:07.038303
+CREATE TABLE "t_formacion_academica_archive"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "f_institucion" CHAR(512) NOT NULL,
+    "f_fecha_inicio" DATE NOT NULL,
+    "f_fecha_fin" DATE,
+    "f_tipo" INTEGER REFERENCES "t_tipo_estudio" ("id") ON DELETE CASCADE  NOT NULL ,
+    "f_hoja" INTEGER REFERENCES "t_hoja_vida" ("id") ON DELETE CASCADE  NOT NULL  UNIQUE,
+    "f_titulo" CHAR(512) NOT NULL,
+    "is_active" CHAR(1),
+    "created_on" TIMESTAMP,
+    "created_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "modified_on" TIMESTAMP,
+    "modified_by" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "current_record" INTEGER REFERENCES "t_formacion_academica" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2019-06-26T21:07:09.158932
+ALTER TABLE "t_hoja_vida" ADD "f_foto" CHAR(512);
+success!
+timestamp: 2019-06-26T21:07:10.768927
+ALTER TABLE "t_hoja_vida_archive" ADD "f_foto" CHAR(512);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!

@@ -1,0 +1,190 @@
+(dp0
+S'page_hoja_vida_manage'
+p1
+S'## Gesti\xc3\xb3n de Hojas de Vida\r\n\r\n{{=form}}'
+p2
+sS'tables'
+p3
+(lp4
+S'auth_user'
+p5
+aS'tipo_estudio'
+p6
+aS'hoja_vida'
+p7
+aS'formacion_academica'
+p8
+aS'experiencia_laboral'
+p9
+asS'name'
+p10
+S'Hojas_de_Vida'
+p11
+sS'table_tipo_estudio'
+p12
+(lp13
+S'nombre required'
+p14
+asS'page_formacion_academica_manage'
+p15
+S'## Gesti\xc3\xb3n de Formaciones academicas\r\n\r\n{{=form}}'
+p16
+sS'table_experiencia_laboral'
+p17
+(lp18
+S'empresa required'
+p19
+aS'cargo required'
+p20
+aS'fecha_inicio date required'
+p21
+aS'fecha_fin date'
+p22
+aS'hoja hoja_vida required unique'
+p23
+asS'page_tipo_estudio_manage'
+p24
+S'## Gesti\xc3\xb3n de Tipos de Estudio\r\n\r\n{{=form}}'
+p25
+sS'table_formacion_academica'
+p26
+(lp27
+S'institucion required'
+p28
+aS'fecha_inicio date required'
+p29
+aS'fecha_fin date'
+p30
+aS'tipo tipo_estudio required'
+p31
+aS'hoja hoja_vida required unique'
+p32
+aS'titulo required'
+p33
+asS'page_index'
+p34
+S'# bienvendio a la APP DE HOJAS DE VIDA'
+p35
+sS'page_error'
+p36
+S'# Error: the P\xc3\xa1gina no existe'
+p37
+sS'page_experiencia_laboral_manage'
+p38
+S'## Gesti\xc3\xb3n de experiencias laborales\r\n\r\n{{=form}}'
+p39
+sS'params'
+p40
+(lp41
+(S'title'
+p42
+S'App Hojas de vida'
+p43
+tp44
+a(S'subtitle'
+p45
+S'powered by web2py'
+p46
+tp47
+a(S'author'
+p48
+S'Alvaro, Nicolas y Sebastian'
+p49
+tp50
+a(S'author_email'
+p51
+S'alvaruto@gmail.com'
+p52
+tp53
+a(S'keywords'
+p54
+Ntp55
+a(S'description'
+p56
+S'Gesti\xc3\xb3n de hojas de vida'
+p57
+tp58
+a(S'layout_theme'
+p59
+S'Default'
+p60
+tp61
+a(S'database_uri'
+p62
+S'sqlite://storage.sqlite'
+p63
+tp64
+a(S'security_key'
+p65
+S'aa174aa5-3fda-4037-b741-bcb3d87e1a38'
+p66
+tp67
+a(S'email_server'
+p68
+S'localhost'
+p69
+tp70
+a(S'email_sender'
+p71
+S'you@example.com'
+p72
+tp73
+a(S'email_login'
+p74
+Ntp75
+a(S'login_method'
+p76
+S'local'
+p77
+tp78
+a(S'login_config'
+p79
+Ntp80
+a(S'plugins'
+p81
+(lp82
+tp83
+asS'table_auth_user'
+p84
+(lp85
+S'username'
+p86
+aS'first_name'
+p87
+aS'last_name'
+p88
+aS'email'
+p89
+aS'password'
+p90
+asS'pages'
+p91
+(lp92
+S'index'
+p93
+aS'error'
+p94
+aS'tipo_estudio_manage'
+p95
+aS'formacion_academica_manage'
+p96
+aS'experiencia_laboral_manage'
+p97
+aS'hoja_vida_manage'
+p98
+asS'table_hoja_vida'
+p99
+(lp100
+S'nombre required'
+p101
+aS'telefono required'
+p102
+aS'direccion required'
+p103
+aS'documento required unique'
+p104
+aS'fecha_nacimiento date required'
+p105
+aS'perfil'
+p106
+as.
