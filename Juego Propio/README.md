@@ -1,4 +1,4 @@
-# Hojas de vida con web2py
+# Head Game
 
 ## Realización de ejercicios de un CRUD de hojas de vida con Web2py
 
